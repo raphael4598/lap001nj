@@ -8,6 +8,6 @@
          name: 66026011nextjs:latest #docker image name
          source: build
          build:
-            path: ~/66026011NextJS #path ที่เก็บไฟล์ sourcecode 
+            path: ~/66026011nextjs #path ที่เก็บไฟล์ sourcecode 
          state: present
          force_source: true
