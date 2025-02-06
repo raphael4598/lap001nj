@@ -2,11 +2,12 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm install
+# Copy built application
+COPY .next ./.next
+COPY public ./public
+COPY node_modules ./node_modules
+COPY package*.json ./
 
-COPY . .
+EXPOSE 3000
 
-RUN npm run build
-
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
